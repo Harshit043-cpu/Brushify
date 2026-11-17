@@ -1,22 +1,30 @@
 #box{
     width: 300px;
-    height: 400px;
-    
-    align-items: center;
-    justify-content: center;
+    min-height: 400px;
+    height: auto;
+
     border: 1px solid black;
     font-size: 25px;
     padding: 10px;
-    
-   max-width: 100%;
-    resize: both;
+
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+
 }
 .color-btn{
     width: 40px;
     height: 40px;
     border-radius:30%;
-    
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease;
 }
+
+.color-btn:hover,
+.fnt-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
 #fnt-color, #fnt-backgroundcolor, #fnt-style{
     
     padding: 10px;
@@ -30,4 +38,10 @@
     cursor: pointer;
     vertical-align: middle;
     line-height: normal;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease;
+}
+
+body{
+
+    background-color: beige;
 }
